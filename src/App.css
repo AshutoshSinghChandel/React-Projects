@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 2.5rem;
+
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background: url('https://th.bing.com/th/id/R.71bd1f639a349be73e3a50aff654f6fe?rik=rQGoUv7Gu4dm3g&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fFree-Download-Abstract-Backgrounds-HD.jpg&ehk=QOpjZ8DwoI9TaAykD9GWkZ%2f%2bcOr5dXeCPpEvvEXrV5k%3d&risl=&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-size: 200vh;
+}
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.buttons button{
+  font-size: 2rem;
+  padding: 1.3rem;
+  background: none;
+  border: 1px solid white;
+  /*
+    
+  background-color: rgba(255, 255, 255, 0.8);
+
+  */
+}
+
+.buttons button:hover{
+  background-color: rgba(175, 174, 174, 0.4);
+  cursor: pointer;
+}
+
+.output{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 3rem,auto;
+  word-wrap: break-word;
+}
+
+.blue{
+  color: blue;
+  font-size: 5rem;
+}
+
+.red{
+  color: red;
+}
+.span-two{
+  grid-column: 1/span 2;
+}
+
+.span-threefour{
+  grid-column: 3/span 2;
+}
+
+/*
+  Responsive style for mobiles
+*/
+
+@media screen and (max-width: 768px){
+  .calculator{
+    max-width: 100%;
+    margin: auto;
   }
 }
